@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, Animated } from 'react-native';
+import { View, TouchableWithoutFeedback, Text, StyleSheet, Animated } from 'react-native';
 
 class DatePickerSwitch extends React.Component {
     state = {
@@ -56,7 +56,7 @@ class DatePickerSwitch extends React.Component {
 
             transformAnimation: {
                 transform: [
-                    { translateX: this.state.moveAnimation}
+                    { translateX: this.state.moveAnimation }
                 ]
             }
         })
@@ -65,13 +65,13 @@ class DatePickerSwitch extends React.Component {
                     <Text style={styles.container__bgText}>
                         DAILY            MONTHLY
                     </Text>
-                    <TouchableOpacity 
-                        onPress={this.handleSwitchToggle}
-                        style={[styles.toggle, styles.transformAnimation]}>
-                        <Text style={styles.lable}> 
-                            {this.state.active ? 'MONTHLY' : 'DAILY'}
-                        </Text>
-                    </TouchableOpacity>
+                    <TouchableWithoutFeedback onPress={this.handleSwitchToggle}>
+                        <Animated.View style={[styles.toggle, styles.transformAnimation]}>
+                            <Text style={styles.lable}> 
+                                {this.state.active ? 'MONTHLY' : 'DAILY'}
+                            </Text>
+                        </Animated.View>
+                    </TouchableWithoutFeedback>
             </View>
         )
     }
