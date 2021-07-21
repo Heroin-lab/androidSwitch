@@ -22,17 +22,17 @@ class DatePickerSwitch extends React.Component {
     render () {
         const styles = StyleSheet.create({
             container: {
-                height: 60,
+                height: 37,
                 width: 190,
                 borderWidth: 1,
-                borderRadius: 20,
+                borderRadius: 12,
                 borderColor: '#A1BDFF',
                 backgroundColor: 'rgba(233, 239, 249, 0.5)',
             },
 
             container__bgText: {
                 position: 'absolute',
-                top: 19,
+                top: 8,
                 left: 29,
                 fontSize: 14,
                 color: '#B0B3BA'
@@ -41,10 +41,10 @@ class DatePickerSwitch extends React.Component {
             toggle: {
                 alignItems: 'center',
                 justifyContent: 'center',
-                height: 58,
+                height: 35,
                 width: 95,
                 borderWidth: 1,
-                borderRadius: 19,
+                borderRadius: 11,
                 borderColor: '#A1BDFF',
                 backgroundColor: '#4950DD',
             },
